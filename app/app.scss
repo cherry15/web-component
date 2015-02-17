@@ -1,0 +1,18 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+@import 'styles/reset.scss';
+
+/**
+ * App-wide Styles
+ */
+html { font-size: 62.5%; } /* font-size: 62.5% now means that 1.0 rem = 10px */
+* {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-family: $font-family;
+}
+* {
+  @include border-box;
+}
+
+

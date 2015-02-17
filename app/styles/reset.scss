@@ -1,0 +1,48 @@
+html,
+body,
+ul,
+ol,
+a,
+p,
+label,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type:none;
+}
+
+li {
+  text-decoration: none;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+  display: table;
+}
+
+* {
+  color: #363742;
+}
+
+a:link, 
+a:visited {
+  color: #363742;
+}
+
+a:hover, 
+a:active {
+  color: #000;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
+

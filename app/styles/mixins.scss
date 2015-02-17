@@ -1,0 +1,70 @@
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+%clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+@mixin gradient-down($startColor, $endColor) {
+  background: -webkit-linear-gradient($startColor, $endColor); 
+  background: -o-linear-gradient($startColor, $endColor); 
+  background: -moz-linear-gradient($startColor, $endColor);
+  background: linear-gradient($startColor, $endColor); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$startColor, endColorstr=$endColor,GradientType=0 );
+}
+
+@mixin gradient-horizontal($startColor, $endColor) {
+  background: -webkit-linear-gradient(left, $startColor , $endColor);
+  background: -o-linear-gradient(right, $startColor, $endColor);
+  background: -moz-linear-gradient(right, $startColor, $endColor);
+  background: linear-gradient(to right, $startColor , $endColor); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$startColor, endColorstr=$endColor);
+}
+
+@mixin transition($property, $speed:0.5s, $easing:linear) {
+  transition: $property $speed $easing;
+  -webkit-transition: $property $speed $easing;
+  -moz-transition: $property $speed $easing;
+  -o-transition: $property $speed $easing;
+}
+
+@mixin transitionNone() {
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: color 0 ease-in;
+  transition: none;
+}
+@mixin greyscale($percent) {
+  filter: grayscale($percent);
+  -webkit-filter: grayscale($percent); 
+}
+@mixin blur($percent) {
+  filter:blur($percent);
+  -webkit-filter: blur($percent);
+}
+@mixin saturate($percent) {
+  filter:saturate($percent);
+  -webkit-filter: saturate($percent);
+}
+
+@mixin invert($percent) {
+  filter:invert($percent);
+  -webkit-filter: invert($percent);
+}
+
+@mixin brightness($percent) {
+  filter:brightness($percent);
+  -webkit-filter: brightness($percent);
+}
+@mixin opacity($percent) {
+  -moz-opacity: $percent/10;
+  opacity: $percent/10;
+  filter: alpha(opacity=($percent * 10));
+}
+
