@@ -1,15 +1,18 @@
-var xmlhttp = new XMLHttpRequest(),
-  url = "data/tutorials.json";
+function getData(url) {
+    var xmlhttp = new XMLHttpRequest();
 
-xmlhttp.onreadystatechange = function () {
-    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-        var myArr = JSON.parse(xmlhttp.responseText);
-        makeThings(myArr);
-    }
-};
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+            var myArr = JSON.parse(xmlhttp.responseText);
+            makeThings(myArr);
+        }
+    };
+}
+var url = "data/tutorials.json";
+getData(url);
 
 function makeThings(arr) {
     var elements = buildItems(arr),
