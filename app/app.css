@@ -48,6 +48,145 @@ button {
   background: none;
 }
 
+.main.content {
+  padding: 0;
+}
+
+.fp-1 {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.fp-2,
+.fp-5 {
+  filter: saturate(500%);
+  -webkit-filter: saturate(500%);
+}
+
+.fp-3,
+.fp-4,
+.fp-6 {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.fp {
+  width: 100%;
+  float: left;
+  max-height: 284px;
+  overflow: hidden;
+  position: relative;
+}
+.fp img {
+  width: 100%;
+  position: relative;
+  top: 0;
+}
+.fp .info.even {
+  height: 100%;
+  margin-left: 0;
+  background: #ADFF2F;
+  background-color: rgba(173, 255, 47, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24rem;
+  transition: margin-left 0.4s linear;
+  -webkit-transition: margin-left 0.4s linear;
+  -moz-transition: margin-left 0.4s linear;
+  -o-transition: margin-left 0.4s linear;
+  text-align: center;
+}
+.fp .info.even.ng-hide {
+  margin-left: -24rem;
+}
+.fp .info.odd {
+  width: 100%;
+  background: #98f9f8;
+  background-color: rgba(152, 249, 248, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-height: 24rem;
+  height: 24rem;
+  transition: max-height 0.4s linear;
+  -webkit-transition: max-height 0.4s linear;
+  -moz-transition: max-height 0.4s linear;
+  -o-transition: max-height 0.4s linear;
+  text-align: center;
+}
+.fp .info.odd.ng-hide {
+  max-height: 0;
+}
+.fp .info h2, .fp .info p {
+  color: #000;
+  text-align: left;
+}
+.fp .info h2 {
+  padding: 1rem 1.6rem;
+  font-size: 2rem;
+}
+.fp .info p {
+  padding: 1.6rem;
+}
+.fp .info hr {
+  height: .1rem;
+  border: none;
+  color: #000;
+  background-color: #000;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+.fp .info cc-right-arrow {
+  position: absolute;
+  right: 1.6rem;
+  background: #1ec9c3;
+  border-radius: 3rem;
+  padding: .2rem;
+  cursor: pointer;
+}
+.fp .info cc-right-arrow span {
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-left: .4rem;
+  color: #98f9f8;
+}
+.fp .info cc-right-arrow span:hover {
+  color: #fff;
+}
+.fp .info.even cc-right-arrow {
+  background: #24e544;
+}
+.fp .info.even cc-right-arrow span {
+  color: #ADFF2F;
+}
+.fp .info.even cc-right-arrow span:hover {
+  color: #fff;
+}
+
+@media only screen and (min-width: 480px) {
+  .main.content {
+    padding: 0;
+  }
+
+  .fp {
+    width: 50%;
+    max-height: 255px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .fp {
+    width: 33%;
+    max-height: 273px;
+  }
+}
+@media only screen and (min-width: 1224px) {
+  .fp {
+    width: 25%;
+    max-height: 332px;
+  }
+}
 /**
  * App-wide Styles
  */

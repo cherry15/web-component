@@ -1,0 +1,133 @@
+.main.content {
+  padding: 0;
+}
+.fp-1 {
+  @include greyscale(100%);
+}
+.fp-2,
+.fp-5 {
+  @include saturate(500%);
+}
+.fp-3, 
+.fp-4, 
+.fp-6 {
+  @include invert(100%);
+}
+
+.fp {
+  width: 100%;
+  float: left;
+  max-height: 284px;
+  overflow: hidden;
+  position: relative;
+  img {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  .info.even {
+    height: 100%;
+    margin-left: 0;
+    background: #ADFF2F;
+    background-color: rgba(173,255,47,.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24rem;
+    @include transition(margin-left, 0.4s);
+    text-align: center;
+  }
+  .info.even.ng-hide {
+    margin-left: -24rem;
+  }
+  .info.odd {
+    width: 100%;
+    background: #98f9f8;
+    background-color: rgba(152,249,248,.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 24rem;
+    height: 24rem;
+    @include transition(max-height, 0.4s);
+    text-align: center;
+  }
+  .info.odd.ng-hide {
+    max-height: 0;
+  }
+
+  .info {
+    h2, p {
+      color: #000;
+      text-align: left;
+    }
+    h2 {
+      padding: 1rem 1.6rem;
+      font-size: 2rem;
+    }
+    p {
+      padding: 1.6rem;
+    }
+    hr {
+      height:.1rem; 
+      border:none; 
+      color:#000; 
+      background-color:#000; 
+      width:90%; 
+      text-align:center; 
+      margin: 0 auto;
+    }
+    cc-right-arrow {
+      position: absolute;
+      right: 1.6rem;
+      background: #1ec9c3;
+      border-radius: 3rem;
+      padding: .2rem;
+      cursor: pointer;
+    }
+    cc-right-arrow span {
+      font-size: 3rem;
+      line-height: 3rem;
+      margin-left: .4rem;
+      color: #98f9f8;
+    }
+    cc-right-arrow span:hover {
+      color: #fff;
+    }
+  }
+  .info.even {
+    cc-right-arrow {
+      background: #24e544;
+    }
+    cc-right-arrow span {
+      color: #ADFF2F;
+    }
+    cc-right-arrow span:hover {
+      color: #fff;
+    }
+  }
+}
+
+@media #{$breakpoint-small} {
+  .main.content {
+    padding: 0;
+  }
+  .fp {
+    width: 50%;
+    max-height: 255px;
+  }
+}
+
+@media #{$breakpoint-medium} {
+  .fp {
+    width: 33%;
+    max-height: 273px;
+  }
+}
+
+@media #{$breakpoint-large} {
+  .fp {
+    width: 25%;
+    max-height: 332px;
+  }
+}
