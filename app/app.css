@@ -52,20 +52,20 @@ button {
   padding: 0;
 }
 
-.fp-1 {
+.fp-1 img {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
 
-.fp-2,
-.fp-5 {
+.fp-2 img,
+.fp-5 img {
   filter: saturate(500%);
   -webkit-filter: saturate(500%);
 }
 
-.fp-3,
-.fp-4,
-.fp-6 {
+.fp-3 img,
+.fp-4 img,
+.fp-6 img {
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
@@ -97,7 +97,7 @@ button {
   -o-transition: margin-left 0.4s linear;
   text-align: center;
 }
-.fp .info.even.ng-hide {
+.fp .info.even.hide {
   margin-left: -24rem;
 }
 .fp .info.odd {
@@ -115,7 +115,7 @@ button {
   -o-transition: max-height 0.4s linear;
   text-align: center;
 }
-.fp .info.odd.ng-hide {
+.fp .info.odd.hide {
   max-height: 0;
 }
 .fp .info h2, .fp .info p {

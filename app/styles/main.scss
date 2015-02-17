@@ -1,16 +1,16 @@
 .main.content {
   padding: 0;
 }
-.fp-1 {
+.fp-1 img {
   @include greyscale(100%);
 }
-.fp-2,
-.fp-5 {
+.fp-2 img,
+.fp-5 img {
   @include saturate(500%);
 }
-.fp-3, 
-.fp-4, 
-.fp-6 {
+.fp-3 img, 
+.fp-4 img, 
+.fp-6 img {
   @include invert(100%);
 }
 
@@ -37,7 +37,7 @@
     @include transition(margin-left, 0.4s);
     text-align: center;
   }
-  .info.even.ng-hide {
+  .info.even.hide {
     margin-left: -24rem;
   }
   .info.odd {
@@ -52,7 +52,7 @@
     @include transition(max-height, 0.4s);
     text-align: center;
   }
-  .info.odd.ng-hide {
+  .info.odd.hide {
     max-height: 0;
   }
 

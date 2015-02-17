@@ -76,8 +76,7 @@ gulp.task('scripts', function () {
         '!' + src + 'components/**/*.spec.js',
         '!' + src + '**/*.spec.js'
     ])
-      .pipe(concat('main.js'))
-      .pipe(rename({suffix: '.min'}))
+      .pipe(concat('app.js'))
       .pipe(uglify())
       .pipe(gulp.dest(dest));
 });
