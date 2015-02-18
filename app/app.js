@@ -6,15 +6,15 @@ function getData(url) {
 
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            var myArr = JSON.parse(xmlhttp.responseText);
-            makeThings(myArr);
+            var tuts = JSON.parse(xmlhttp.responseText);
+            makeTuts(tuts);
         }
     };
 }
 var url = "data/tutorials.json";
 getData(url);
 
-function makeThings(arr) {
+function makeTuts(arr) {
     var elements = buildItems(arr),
       i = 0,
       container = document.querySelectorAll(".main.content")[0];
